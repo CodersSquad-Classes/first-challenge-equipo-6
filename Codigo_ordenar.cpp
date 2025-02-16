@@ -1,3 +1,4 @@
+#include "Quick_sort.cpp"
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -57,10 +58,7 @@ std::vector<unsigned char> getBytes(const std::string &file){
 
 // Ordena los bytes basado en su valor hexadecimal
 void sortBytes(std::vector<unsigned char>& bytes){
-    std::sort(bytes.begin(), bytes.end(), 
-    [](unsigned char &a, unsigned char &b){
-        return a < b;
-    });
+    quick_sort(bytes, 0, bytes.size() - 1);
 }
 
 // Pasa los bytes ordenados a un nuevo archivo, regresandolos a sus valores originales
@@ -79,7 +77,7 @@ void generateFile(const std::vector<unsigned char>& bytes, const std::string& ou
 }
 
 int main() {
-    std::string file = "sorted_sample.txt";
+    std::string file = "data.txt";
 
     // REVISION DE LA CANTIDAD DE CARACTERES
 
@@ -89,6 +87,6 @@ int main() {
     std::vector<unsigned char> bytes = getBytes(file);
     sortBytes(bytes);
     generateFile(bytes, "sorted_output.txt");
-    std::cout << "File sorted successfully. Check sorted_output.txt\n";
+    std::cout << "Listo\n";
     return 0;
 }
