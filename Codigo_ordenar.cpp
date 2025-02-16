@@ -86,7 +86,7 @@ int main() {
 
     std::vector<unsigned char> bytes = getBytes(file);
     sortBytes(bytes);
-    generateFile(bytes, "sorted_data.txt");
+    generateFile(bytes, "sorted_complete.txt");
     std::cout << "Listo\n";
     return 0;
 }
