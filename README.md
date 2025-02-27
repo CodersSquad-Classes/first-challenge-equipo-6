@@ -90,7 +90,9 @@ contest and will get the extra bonus in the final grade.
 
 En el bash, se dirige al directorio donde tenga los archivos y, dependiendo
 del compilador que use, ejecute las siguientes líneas: 
+
 time prlimit --as=1073741824 -- g++ Codigo_ordenar.cpp Quick_sort.cpp -o Codigo_ordenar
+
 time prlimit --as=1073741824 -- ./Codigo_ordenar.exe
 
 ## Uso de prlimit
