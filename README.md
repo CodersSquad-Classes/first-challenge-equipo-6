@@ -85,3 +85,15 @@ Your program will be tested in an isolated environment (containers) with the fol
 Grading will be based in the time it takes for each test case, and the team 
 that gets the fastest time in all scenarios is the one that will win the 
 contest and will get the extra bonus in the final grade.
+
+## Cómo usarlo 
+
+En el bash, se dirige al directorio donde tenga los archivos y, dependiendo
+del compilador que use, ejecute las siguientes líneas: 
+time prlimit --as=1073741824 -- g++ Codigo_ordenar.cpp Quick_sort.cpp -o Codigo_ordenar
+time prlimit --as=1073741824 -- ./Codigo_ordenar.exe
+
+## Uso de prlimit
+
+prlimit nos permite modificar los límites de recursos y utiliza una memoria virtual para 
+simular la situación que nos plantea el problema. 
