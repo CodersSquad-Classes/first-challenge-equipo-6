@@ -1,0 +1,5 @@
+./bench.sh: line 10:     8 Killed                  ./main
+
+real	0m33.912s
+user	0m26.724s
+sys	0m3.108s
